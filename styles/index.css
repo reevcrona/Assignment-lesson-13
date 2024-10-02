@@ -1,0 +1,15 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    min-height: 10vh;
+}
+.hero-section{
+    min-height: 90vh;
+    background-image: url(../images/2400-cat-looking-up-at-pink-background.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
