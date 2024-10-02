@@ -3,13 +3,63 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
+
+
+/*Header*/
+
 header{
     min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #D48A8A;
+    color: white;
 }
+.header-logo{
+    margin: 0;
+    font-size: 2.4rem;
+}
+.nav-list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+.nav-li{
+    list-style: none;
+}
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    position: relative;
+    z-index: 1;
+}
+.nav-link::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 150%;
+    height:0;
+    z-index: -1;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+.nav-link:hover::before{
+    height: 200%;
+}
+
+/*Header*/
+
+
+/*Hero*/
 .hero-section{
     min-height: 90vh;
-    background-image: url(../images/2400-cat-looking-up-at-pink-background.jpeg);
+    background-image: url(../images/hero-image.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+/*Hero*/
