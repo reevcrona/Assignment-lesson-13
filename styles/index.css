@@ -2,7 +2,8 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+    position: relative;
+    overflow: hidden;
 }
 
 
@@ -41,6 +42,7 @@ nav{
 .header-logo{
     width:65px;
     height: 65px;
+    
 }
 .nav-list{
     display: flex;
@@ -51,7 +53,7 @@ nav{
 }
 .nav-li{
     list-style: none;
-}
+} 
 .nav-link{
     text-decoration: none;
     color: white;
@@ -75,7 +77,35 @@ nav{
 .nav-link:hover::before{
     height: 200%;
 }
-
+.burger-menu{
+    display: none;
+    font-size: 2.5rem;
+}
+.overlay-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out;
+}
+.overlay-link{
+    text-decoration: none;
+    color: white;
+}
+.active{
+    transform: translateY(0);
+    opacity: 1;
+}
 /*Header*/
 
 
@@ -122,10 +152,7 @@ nav{
     border: 2px solid black;
 }
 
-.burger-menu{
-    display: none;
-    font-size: 2.5rem;
-}
+
 
 
 
